@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668B869E1F55632B0038570C /* THNFindControllerInStoryboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B869D1F55632B0038570C /* THNFindControllerInStoryboard.m */; };
 		66FB70051F3968080095B32E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB70041F3968080095B32E /* AppDelegate.m */; };
 		66FB70081F3968080095B32E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB70071F3968080095B32E /* main.m */; };
 		66FB700B1F3968080095B32E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66FB700A1F3968080095B32E /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		668B869C1F55632B0038570C /* THNFindControllerInStoryboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THNFindControllerInStoryboard.h; sourceTree = "<group>"; };
+		668B869D1F55632B0038570C /* THNFindControllerInStoryboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THNFindControllerInStoryboard.m; sourceTree = "<group>"; };
 		66FB70001F3968080095B32E /* THNAbandonedCodeSourceFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = THNAbandonedCodeSourceFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66FB70031F3968080095B32E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		66FB70041F3968080095B32E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 		66FB701A1F3AF4810095B32E /* SRC */ = {
 			isa = PBXGroup;
 			children = (
+				668B869C1F55632B0038570C /* THNFindControllerInStoryboard.h */,
+				668B869D1F55632B0038570C /* THNFindControllerInStoryboard.m */,
 				66FB701B1F3AF4B70095B32E /* THNAbandonedCodeSourceFinder.h */,
 				66FB701C1F3AF4B70095B32E /* THNAbandonedCodeSourceFinder.m */,
 			);
@@ -170,6 +175,7 @@
 				66FB70081F3968080095B32E /* main.m in Sources */,
 				66FB70051F3968080095B32E /* AppDelegate.m in Sources */,
 				66FB701D1F3AF4B70095B32E /* THNAbandonedCodeSourceFinder.m in Sources */,
+				668B869E1F55632B0038570C /* THNFindControllerInStoryboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

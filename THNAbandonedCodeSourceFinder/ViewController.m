@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "THNAbandonedCodeSourceFinder.h"
+#import "THNFindControllerInStoryboard.h"
 
 @interface ViewController ()
 
@@ -77,8 +78,14 @@
     //[self checkLocalDuplicateNameFileWithSubPathArray:subPathArray];
     //return;
     
+    // 主入口+动态配置的入口
     NSArray *entranceNameArray = [self.fileTextField.stringValue componentsSeparatedByString:@";"];
-    NSArray *localPathArray = [THNAbandonedCodeSourceFinder findAbandonedFileWithSubPathArray:subPathArray path:path entranceNameArray:entranceNameArray];
+    // storyboard中的入口
+    NSArray *storyboardVCArray = [THNFindControllerInStoryboard findStoryboardControllerWithPath:path];
+    NSMutableArray *unionEntranceArray = [NSMutableArray arrayWithArray:entranceNameArray];
+    [unionEntranceArray addObjectsFromArray:storyboardVCArray];
+    
+    NSArray *localPathArray = [THNAbandonedCodeSourceFinder findAbandonedFileWithSubPathArray:subPathArray path:path entranceNameArray:unionEntranceArray];
     
     CGFloat runTime = [NSDate date].timeIntervalSince1970 - beginDate.timeIntervalSince1970;
     NSString *resultTestStr = [NSString stringWithFormat:@"本地文件数[%zi],运算耗时[%.3lf秒]",  subPathArray.count, runTime];
